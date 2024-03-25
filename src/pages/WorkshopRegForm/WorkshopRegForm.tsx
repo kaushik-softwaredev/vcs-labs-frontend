@@ -1,7 +1,10 @@
 import React, { EventHandler, FormEvent, FormEventHandler, useEffect, useState } from 'react';
 import styles from "./workshop-reg-form.module.scss"
 import { fetchExpertises } from '../../service/vcs-service/vcs-service';
+import { useParams } from 'react-router-dom';
 const WorkshopRegForm = () => {
+    const params = useParams()
+    console.log({ params })
     const [formData, setFormData] = useState({});
     const submitHandler = (e: FormEvent) => {
         e.preventDefault();
