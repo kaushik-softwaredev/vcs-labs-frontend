@@ -1,14 +1,49 @@
-.workshopFormContainer {
+.workshopPageContainer {
+    width: 100%;
     display: grid;
-    grid-template-columns: auto;
-    gap: 1rem;
-    background-color: #282c32;
-    padding: 3rem;
-    border-radius: 0.25rem;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
 
-    .workshopFormFields {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 1rem;
+    .workshopBannerImage {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .workshopSection2Container {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        background-color: #282c32;
+        flex-direction: column;
+
+        .workshopFormTitleContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25%;
+
+            label {
+                font-size: 2em;
+                font-weight: 600;
+            }
+        }
+
+        .workshopFormContainer {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 1rem;
+            padding: 3rem;
+            border-radius: 0.25rem;
+            height: fit-content;
+
+            .workshopFormFields {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                gap: 1rem;
+            }
+        }
     }
 }
